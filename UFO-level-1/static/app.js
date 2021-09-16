@@ -34,21 +34,10 @@ draw_data(tableData);
 
 function update_page(){
     var value1 = d3.select("#datetime").property("value");
-    // console.log(value);
+    
     var new_data1 = tableData.filter(d => d.datetime===value1);
-    // console.log(new_data);
+   
     draw_data(new_data1);
-    // var value2 = d3.select("#city").property("value");
-    // var new_data2 = tableData.filter(d => d.city===value2)
-    // draw_data(new_data2);
+ 
 }
 d3.select("#filters").on("change", update_page);
-
-
-// trial code
-// function runEnter(){
-//     d3.event.preventDefault();
-//     var inputElement = d3.select("#filters");
-//     var InputValue = inputElement.property("value");
-// 
-// }
