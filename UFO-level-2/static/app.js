@@ -22,16 +22,16 @@ draw_data(tableData);
 
 function update_page(){
     new_data1 = tableData;
-    var value1 = d3.select("#datetime").property("value");
-    if(value1!=="") new_data1 = new_data1.filter(d => d.datetime===value1);
-    var value2 = d3.select("#city").property("value");
-    if(value2!=="") new_data1 = new_data1.filter(d => d.city===value2);
-    var value2 = d3.select("#state").property("value");
-    if(value2!=="") new_data1 = new_data1.filter(d => d.state===value2);
-    var value2 = d3.select("#country").property("value");
-    if(value2!=="") new_data1 = new_data1.filter(d => d.country===value2);
-    var value2 = d3.select("#shape").property("value");
-    if(value2!=="") new_data1 = new_data1.filter(d => d.shape===value2);
+    var value = d3.select("#datetime").property("value");
+    if(value!=="") new_data1 = new_data1.filter(d => d.datetime===value);
+    value = d3.select("#city").property("value");
+    if(value!=="") new_data1 = new_data1.filter(d => d.city===value);
+    value = d3.select("#state").property("value");
+    if(value!=="") new_data1 = new_data1.filter(d => d.state===value);
+    value = d3.select("#country").property("value");
+    if(value!=="") new_data1 = new_data1.filter(d => d.country===value);
+    value = d3.select("#shape").property("value");
+    if(value!=="") new_data1 = new_data1.filter(d => d.shape===value);
     draw_data(new_data1);
 }
 d3.select("#filters").on("change", update_page);
